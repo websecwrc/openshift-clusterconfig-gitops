@@ -19,7 +19,6 @@ environment: &environment in-cluster
 
 # Parameters handed over to Sub-Chart helper-proj-onboarding
 helper-proj-onboarding:
-
   # Allowed environments that this tenant can use. This list is mandatory to explicitly set the destination clusters.
   # The name here must be equal to the configured environments in the Global-Values
 
@@ -29,7 +28,7 @@ helper-proj-onboarding:
     - in-cluster
 
   allowed_source_repos:
-    - https://my-git-repo.com/super-repo
+    - https://github.com/websecwrc/openshift-clusterconfig-gitops
 
   # Groups that are allowed in RBAC.
   # This group can either be created using this Helm Chart (will be named as <namespace>-admin) or must be known (for example synced via LDAP Group Sync)
@@ -41,7 +40,6 @@ helper-proj-onboarding:
   # List of namespaces this tenant shall manage.
   # A tenant or project may consist of multiple namespace
   namespaces:
-
     # Name of the first Namespace
     - name: &name tenant1-app-1
 
@@ -75,7 +73,7 @@ helper-proj-onboarding:
           # sourceRepos:
           #  - 'https://git-repo-com/overwrites-other-lists'
           rbac:
-              # Name of the RBAC rule
+            # Name of the RBAC rule
             - name: write
               # Description of the RBAC rule
               description: "Group to deploy on target environments"
@@ -95,7 +93,7 @@ helper-proj-onboarding:
               policies:
                 - action: get # get, create, update, delete, sync, override
                   permission: allow # allow or deny
-                  object: '*' # which kind of objects can be managed, default "*" (all) inside the namespace
+                  object: "*" # which kind of objects can be managed, default "*" (all) inside the namespace
                 - action: create
                   permission: allow
                 - action: update
@@ -109,7 +107,7 @@ helper-proj-onboarding:
             - name: read
               description: "Group to deploy on target environments"
               overwrite_oidc_groups:
-               - read-group
+                - read-group
               policies:
                 - action: get
                   permission: allow
@@ -231,7 +229,7 @@ helper-proj-onboarding:
       # 2. Define Ingress rules with selectors and ports or IP addresses
       # 3. Optionally define egress Rules
       networkpolicies:
-          # List of NetworkPolicies to create with name and switch if active or not
+        # List of NetworkPolicies to create with name and switch if active or not
         - name: netpol1
           active: true
 
@@ -244,13 +242,13 @@ helper-proj-onboarding:
           # Incoming Rules, based on Port and Selectors (Pod and Namespace)
           ingressRules:
             - selectors:
-                  - podSelector:
-                      matchLabels:
-                        app: myapplication
-                        version: '1.0'
-                  - namespaceSelector:
-                      matchLabels:
-                        testnamespace: "true"
+                - podSelector:
+                    matchLabels:
+                      app: myapplication
+                      version: "1.0"
+                - namespaceSelector:
+                    matchLabels:
+                      testnamespace: "true"
               ports:
                 - protocol: TCP
                   port: 443
@@ -268,7 +266,7 @@ helper-proj-onboarding:
                 - podSelector:
                     matchLabels:
                       app: myapplication
-                      version: '1.0'
+                      version: "1.0"
 
           # 2nd example
         - name: netpol2
@@ -279,18 +277,17 @@ helper-proj-onboarding:
           # Incoming Rules, based on ipBlock and Selectors
           ingressRules:
             - selectors:
-                  - podSelector: {}
-                  - namespaceSelector:
-                      matchLabels:
-                        testnamespace: "testnamespace"
-                  - ipBlock:
-                      cidr: 127.0.0.1/24
-                      except:
-                        - 127.0.0.2/32
+                - podSelector: {}
+                - namespaceSelector:
+                    matchLabels:
+                      testnamespace: "testnamespace"
+                - ipBlock:
+                    cidr: 127.0.0.1/24
+                    except:
+                      - 127.0.0.2/32
               ports:
                 - protocol: TCP
                   port: 443
-
 ################################
-    #  Name of the 2nd Namespace, with only Namespace creation
+#  Name of the 2nd Namespace, with only Namespace creation
 
