@@ -75,7 +75,6 @@ network-observability:
 
     # -- Agent configuration for flows extraction
     agent:
-
       # -- Type of the agent.
       # @default -- eBPF
       type: eBPF
@@ -165,7 +164,6 @@ network-observability:
 
     # Processor Configuration of the component that receives the flows from the agent, enriches them, and sends them to the storage.
     processor:
-
       # -- Log types defines the desired record types to generate. Possible values are:<br>
       # <ul>
       # <li>Flows to export regular network flows. This is the default.</li>
@@ -201,7 +199,6 @@ helper-lokistack:
 
   # storage settings
   storage:
-
     # -- Size defines one of the supported Loki deployment scale out sizes.
     # Can be either:
     #   - 1x.extra-small (Default)
@@ -212,7 +209,6 @@ helper-lokistack:
 
     # Secret for object storage authentication. Name of a secret in the same namespace as the LokiStack custom resource.
     secret:
-
       # -- Name of a secret in the namespace configured for object storage secrets.
       name: *loki-secret-name
 
@@ -229,14 +225,14 @@ helper-lokistack:
 
     # Schemas for reading and writing logs.
     # schemas:
-      # -- Version for writing and reading logs.
-      # Can be v11, v12 or v13
-      # @default -- v13
-      #  - version: v13
+    # -- Version for writing and reading logs.
+    # Can be v11, v12 or v13
+    # @default -- v13
+    #  - version: v13
 
-      # -- EffectiveDate is the date in UTC that the schema will be applied on. To ensure readibility of logs, this date should be before the current date in UTC.
-      # @default -- 2022-06-01
-      #    effectiveDate: "2022-06-01"
+    # -- EffectiveDate is the date in UTC that the schema will be applied on. To ensure readibility of logs, this date should be before the current date in UTC.
+    # @default -- 2022-06-01
+    #    effectiveDate: "2022-06-01"
 
   # -- Storage class name defines the storage class for ingester/querier PVCs.
   # @default -- gp3-csi
@@ -354,7 +350,7 @@ helper-objectstore:
   # Name of the BackingStore
   backingstore_name: netobserv-backingstore
   # Size of the BackingStore
-  backingstore_size: 100Gi
+  backingstore_size: 2Gi
   # numOfVolumes: 1
   # type: py-pool
 
@@ -415,7 +411,7 @@ helper-operator:
   operators:
     netobserv-operator:
       enabled: true
-      syncwave: '0'
+      syncwave: "0"
       namespace:
         name: *namespace-operator
         create: true
@@ -428,7 +424,6 @@ helper-operator:
       operatorgroup:
         create: true
         notownnamespace: true
-
 
 helper-status-checker:
   enabled: true
