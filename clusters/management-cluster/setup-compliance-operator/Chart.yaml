@@ -1,7 +1,7 @@
 apiVersion: v2
 name: setup-compliance-operator
 description: Deploy and configure the Compliance Operator
-home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-compliance-operator
+home: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-compliance-operator
 version: 1.0.2
 dependencies:
   - name: tpl
@@ -24,7 +24,7 @@ maintainers:
 sources:
   - https://github.com/tjungbauer/helm-charts
   - https://charts.stderr.at/
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
+  - https://github.com/websecwrc/openshift-clusterconfig-gitops
 keywords:
   - compliance
   - security

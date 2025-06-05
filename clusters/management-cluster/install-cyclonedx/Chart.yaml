@@ -16,7 +16,7 @@ maintainers:
 sources:
   - https://github.com/tjungbauer/helm-charts
   - https://charts.stderr.at/
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
+  - https://github.com/websecwrc/openshift-clusterconfig-gitops
 keywords:
   - secure-supply-chain
   - security

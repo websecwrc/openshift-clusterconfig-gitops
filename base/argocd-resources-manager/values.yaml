@@ -9,7 +9,7 @@ mgmt-cluster-name: &mgmtclustername in-cluster
 production-cluster: &prodcluster https://api.crc.testing:6443
 production-cluster-name: &prodclustername prod
 
-repourl: &repourl 'https://github.com/tjungbauer/openshift-clusterconfig-gitops'
+repourl: &repourl 'https://github.com/websecwrc/openshift-clusterconfig-gitops'
 repobranch: &branch main
 
 # the anchor *rev must be set to a default value, in case it is not set for the cluster

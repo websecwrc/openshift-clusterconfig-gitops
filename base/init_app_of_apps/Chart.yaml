@@ -14,8 +14,8 @@ dependencies:
     version: ~2.0.41
     repository: https://charts.stderr.at/
 sources:
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
-home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/base/init_app_of_apps
+  - https://github.com/websecwrc/openshift-clusterconfig-gitops
+home: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/base/init_app_of_apps
 keywords:
   - helper
   - subchart
