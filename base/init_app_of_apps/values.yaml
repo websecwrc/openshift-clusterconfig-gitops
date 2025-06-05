@@ -1,0 +1,31 @@
+---
+helper-argocd:
+  applications:
+    argocd-resources-manager:
+      enabled: true
+      server: https://kubernetes.default.svc
+      namespace: {}
+      project: default
+      description: "This is the starting point which will initialize all applicationsets or argocd applications"
+      labels:
+        category: test
+      syncPolicy:
+        autosync_enabled: true
+        syncpolicy_prune: true
+        syncpolicy_selfheal: true
+
+      multiple_sources:
+          # Define repository of the values-file
+        - repoUrl: https://github.com/tjungbauer/openshift-clusterconfig-gitops
+          targetRevision: main
+          ref: values
+          # Define Helm Chart repository
+        - repoUrl: "https://charts.stderr.at/"
+          chart: helper-argocd
+          targetRevision: 2.0.41
+          # Path to the values file
+          helm:
+            default_values_file: $values/base/argocd-resources-manager/values.yaml
+
+  general:
+    server: dummy

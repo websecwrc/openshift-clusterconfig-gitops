@@ -1,0 +1,18 @@
+---
+cluster_admin_list:
+  - emergency
+
+# @ignore
+generic-cluster-config:
+  ######################
+  # IDENTITY PROVIDERS #
+  ######################
+  idp:
+    enabled: true
+    # Define provider. Currently htpasswd and LDAP are supported
+    providers:
+      enabled: true
+      htpasswd:
+        - name: Emergency
+          enabled: true
+          secretname: htpasswd-secret
