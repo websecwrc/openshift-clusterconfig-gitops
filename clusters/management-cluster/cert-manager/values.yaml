@@ -42,6 +42,7 @@ cert-manager:
     syncwave: "10"
 
     unsupportedConfigOverrides:
+      enabled: false
       controller:
         args:
           - "--controllers=*,-certificaterequests-approver"
@@ -185,4 +186,3 @@ policies:
 
     selector:
       issuerRef: {}
-
