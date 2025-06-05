@@ -31,6 +31,40 @@ helper-status-checker:
         name: "status-checker-cert-manager"
 
 #########################################################
+# CERT-Manager configuration
+#########################################################
+# Configure/patch the default cert-amanger instance and add unsupported configuration.
+# The Auto-Approver controller must be disabled, to approver policy can be used.
+cert-manager:
+  certManager:
+    enable_patch: true
+
+    syncwave: "10"
+
+    unsupportedConfigOverrides:
+      controller:
+        args:
+          - "--controllers=*,-certificaterequests-approver"
+
+    overrideArgs:
+      enabled: false
+      args:
+        - "--dns01-recursive-nameservers-only"
+        - --dns01-recursive-nameservers=ns-362.awsdns-45.com:53,ns-930.awsdns-52.net:53
+
+  issuer:
+    - name: selfsigned
+      type: ClusterIssuer
+      enabled: true
+      selfSigned: true
+
+    - name: ca
+      type: ClusterIssuer
+      enabled: true
+      ca:
+        secretName: ca-key-pair
+
+#########################################################
 # CERT-Manager Approver Policy Deployment (extra chart)
 #########################################################
 cert-manager-approver-policy:
@@ -122,6 +156,21 @@ policies:
         validations: []
 
       # isCA: false
+      subject:
+        organizations:
+          required: false
+          values:
+            - "MyOrganization"
+          validations:
+            - rule: self.matches("MyOrganization")
+              message: Organization must be MyOrganization
+        countries:
+          required: false
+          values:
+            - AT
+          validations:
+            - rule: self.matches("AT")
+              message: Country code must be AT
       usages:
         - "server auth"
         - "client auth"
