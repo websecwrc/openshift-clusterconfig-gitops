@@ -186,7 +186,6 @@ redhat-trusted-profile-analyzer:
             source: https://github.com/github/advisory-database
             path: advisories
             disabled: false
-            
   oidc:
     issuerUrl: https://sso.apps-crc.testing/realms/openshift
     clients:
@@ -238,3 +237,4 @@ redhat-trusted-profile-analyzer:
   #           source: https://github.com/github/advisory-database
   #           path: advisories
   #           disabled: false
+
