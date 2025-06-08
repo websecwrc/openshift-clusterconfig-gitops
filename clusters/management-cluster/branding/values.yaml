@@ -3,17 +3,17 @@ generic-cluster-config:
   console:
     console_banners:
       topbanner:
-        enabled: true
-        text: 'Management Cluster'
+        enabled: false
+        text: "Management Cluster"
         location: BannerTop
         color: "#FFFFFF"
-        backgroundcolor: '#FF0000'
+        backgroundcolor: "#FF0000"
       bottombanner:
-        enabled: false
-        text: Copyright © 2024 Sample Company, Inc. |
+        enabled: true
+        text: "You are now in the LAB cluster"
         location: BannerBottom
         color: "#FFFFFF"
-        backgroundcolor: '#000'
+        backgroundcolor: "#ADA"
         link:
-          href: 'https://www.example.com/data-protection-policy'
-          text: Data Protection and Privacy Policy
+          href: "https://openshift-gitops-server-openshift-gitops.apps-crc.testing/"
+          text: "ArgoCD Quicklink"

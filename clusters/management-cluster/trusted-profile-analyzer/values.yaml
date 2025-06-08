@@ -93,7 +93,7 @@ redhat-trusted-profile-analyzer:
           key: AWS_SECRET_ACCESS_KEY
 
   database:
-    #sslMode: require
+    # sslMode: require
     host:
       valueFrom:
         secretKeyRef:
@@ -199,7 +199,7 @@ redhat-trusted-profile-analyzer:
               name: oidc-cli
               key: client-secret
 
-  #$schema: "charts/trustify/values.schema.json"
+  # $schema: "charts/trustify/values.schema.json"
 
   # appDomain: apps-crc.testing
   # tracing: {}
@@ -237,4 +237,3 @@ redhat-trusted-profile-analyzer:
   #           source: https://github.com/github/advisory-database
   #           path: advisories
   #           disabled: false
-
