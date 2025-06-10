@@ -1,6 +1,7 @@
 ---
 cluster_admin_list:
   - emergency
+  - kubeadmin
 
 # @ignore
 generic-cluster-config:
