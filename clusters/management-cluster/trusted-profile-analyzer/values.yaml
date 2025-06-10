@@ -38,7 +38,7 @@ helper-objectstore:
   # Name of the BackingStore
   backingstore_name: tpa-backingstore
   # Size of the BackingStore
-  backingstore_size: 700Gi
+  backingstore_size: 50Gi
   # numOfVolumes: 1
   # type: py-pool
 

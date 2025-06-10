@@ -47,5 +47,5 @@ cert-manager:
 
         # Reference to the issuer that shall be used.
         issuerRef:
-          name: letsencrypt-prod
+          name: selfsigned
           kind: ClusterIssuer

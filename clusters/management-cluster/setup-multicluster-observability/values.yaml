@@ -32,7 +32,6 @@ multicluster_observability:
 
     # Advanced configurations for observability
     advanced:
-
       # Specifies Alertmanager additional configuration
       # @default -- empty
       alertmanager: {}
@@ -82,7 +81,7 @@ helper-objectstore:
   # Name of the BackingStore
   backingstore_name: observability-backingstore
   # Size of the BackingStore
-  backingstore_size: 200Gi
+  backingstore_size: 50Gi
   limits_cpu: 500m
   limits_memory: 2Gi
   # numOfVolumes: 1

@@ -1,18 +1,14 @@
-
-
 # setup-acs
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
 [![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
-  ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square)
 
- 
+## Description
 
-  ## Description
-
-  Deploys Advanced Cluster Security (ACS) on target cluster. If enabled Central will be deployed too.
+Deploys Advanced Cluster Security (ACS) on target cluster. If enabled Central will be deployed too.
 
 This "wrapper" Helm Chart is used to deploy and configure Advanced Cluster Security (ACS) using a GitOps approach.
 It uses the Chart [RHACS Setup](https://github.com/websecwrc/helm-charts/tree/main/charts/rhacs-setup) which mainly takes care to
@@ -34,25 +30,27 @@ Verify the README and/or the values files for further information.
 
 This chart has the following dependencies:
 
-| Repository | Name | Version |
-|------------|------|---------|
-| https://charts.stderr.at/ | helper-operator | ~1.0.23 |
-| https://charts.stderr.at/ | helper-status-checker | ~4.0.0 |
-| https://charts.stderr.at/ | rhacs-setup | ~1.0.0 |
+| Repository                | Name                  | Version |
+| ------------------------- | --------------------- | ------- |
+| <https://charts.stderr.at/> | helper-operator       | ~1.0.23 |
+| <https://charts.stderr.at/> | helper-status-checker | ~4.0.0  |
+| <https://charts.stderr.at/> | rhacs-setup           | ~1.0.0  |
 
 ## Maintainers
 
-| Name | Email | Url |
-| ---- | ------ | --- |
+| Name       | Email                 | Url                       |
+| ---------- | --------------------- | ------------------------- |
 | tjungbauer | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
 
 ## Sources
-Source:
-* <https://github.com/websecwrc/helm-charts>
-* <https://charts.stderr.at/>
-* <https://github.com/websecwrc/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-acs
+Source:
+
+- <https://github.com/websecwrc/helm-charts>
+- <https://charts.stderr.at/>
+- <https://github.com/websecwrc/openshift-clusterconfig-gitops>
+
+Source code: <https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-acs>
 
 ## Example values files
 
@@ -67,31 +65,29 @@ clustername: &clustername local-cluster
 #########################################
 rhacs-setup:
   rhacs:
-
     namespace:
       # -- Namespace where ACS shall be deployed. Typically, this is stackrox. This is not the Operator itself, that is usually deployed in "rhacs-operator".
       name: stackrox
 
       # -- Syncwave to deploy the ACS namespace.
       # @default -- 0
-      syncwave: '0'
+      syncwave: "0"
 
       # -- Description of the Namespace.
-      descr: 'Red Hat Advanced Cluster Security'
+      descr: "Red Hat Advanced Cluster Security"
 
     ################
     # CENTRAL of ACS
     ################
     # Settings for the Central of ACS
     central:
-
       # -- Enabled yes or not. Typically, a Central is installed only once (maybe on the management cluster) and will manage different external clusters.
       # @default -- false
       enabled: true
 
       # -- Syncwave for Argo CD to create the Central
       # @default -- 3
-      syncwave: '3'
+      syncwave: "3"
 
       # -- Configures whether Red Hat Advanced Cluster Security should run in online or
       # offline (disconnected) mode. In offline mode, automatic updates of
@@ -102,12 +98,14 @@ rhacs-setup:
       egress:
         connectivityPolicy: Online
 
+      # @default -- 100Gi
+      pvc_size: 50Gi
+
       ###############
       # CENTRAL DB
       ###############
       # Settings for Central DB, which is responsible for data persistence.
       db:
-
         # resources for Central DB ...
         # Default values are:
         #   - limits cpu 8, memory 16Gi
@@ -117,8 +115,8 @@ rhacs-setup:
         # -- Set Central DB resources.requests for a DEMO environment to save resources.
         resources:
           requests:
-            cpu: '1'
-            memory: '1Gi'
+            cpu: "1"
+            memory: "1Gi"
 
         # -- If you want this component to only run on specific nodes, you can
         # configure tolerations of tainted nodes.
@@ -181,7 +179,7 @@ rhacs-setup:
 
       # -- Syncwave for Argo CD to deploy the SecureCluster
       # @default -- 4
-      syncwave: '4'
+      syncwave: "4"
 
       # -- Name of the cluster
       # @default -- local-cluster"
@@ -213,9 +211,9 @@ rhacs-setup:
     # -- Basic settings for ACS authentication
     # This configuration is done by a Job, that will configure the OpenShift oauth for ACS.
     basic_acs_settings:
-      auth_provider: 'OpenShift'
-      auth_provider_type: 'openshift'
-      min_access_role: 'None'
+      auth_provider: "OpenShift"
+      auth_provider_type: "openshift"
+      min_access_role: "None"
       syncwave: 5
 
     ####################################################
@@ -235,7 +233,7 @@ rhacs-setup:
 
       # -- Syncwave for Argo CD to create this Job.
       # @default -- 3
-      syncwave: '3'
+      syncwave: "3"
 
     # -- Job that creates a console link in OpenShift
     consolelink:
@@ -245,7 +243,7 @@ rhacs-setup:
 
       # -- Syncwave for Argo CD to create this Job.
       # @default -- 3
-      syncwave: '3'
+      syncwave: "3"
 
       # -- Location of the ConsoleLink
       location: ApplicationMenu
@@ -270,7 +268,7 @@ helper-operator:
   operators:
     rhacs-operator:
       enabled: true
-      syncwave: '0'
+      syncwave: "0"
       namespace:
         name: *operatornamespace
         create: true
@@ -292,7 +290,6 @@ helper-status-checker:
   enabled: true
 
   checks:
-
     - operatorName: rhacs-operator
       namespace:
         name: rhacs-operator
@@ -302,5 +299,6 @@ helper-status-checker:
         name: "status-checker-acs"
 ```
 
-----------------------------------------------
+---
+
 Autogenerated from chart metadata using [helm-docs v1.12.0](https://github.com/norwoodj/helm-docs/releases/v1.12.0)
