@@ -8,31 +8,29 @@ clustername: &clustername local-cluster
 #########################################
 rhacs-setup:
   rhacs:
-
     namespace:
       # -- Namespace where ACS shall be deployed. Typically, this is stackrox. This is not the Operator itself, that is usually deployed in "rhacs-operator".
       name: stackrox
 
       # -- Syncwave to deploy the ACS namespace.
       # @default -- 0
-      syncwave: '0'
+      syncwave: "0"
 
       # -- Description of the Namespace.
-      descr: 'Red Hat Advanced Cluster Security'
+      descr: "Red Hat Advanced Cluster Security"
 
     ################
     # CENTRAL of ACS
     ################
     # Settings for the Central of ACS
     central:
-
       # -- Enabled yes or not. Typically, a Central is installed only once (maybe on the management cluster) and will manage different external clusters.
       # @default -- false
       enabled: true
 
       # -- Syncwave for Argo CD to create the Central
       # @default -- 3
-      syncwave: '3'
+      syncwave: "3"
 
       # -- Configures whether Red Hat Advanced Cluster Security should run in online or
       # offline (disconnected) mode. In offline mode, automatic updates of
@@ -48,7 +46,6 @@ rhacs-setup:
       ###############
       # Settings for Central DB, which is responsible for data persistence.
       db:
-
         # resources for Central DB ...
         # Default values are:
         #   - limits cpu 8, memory 16Gi
@@ -58,8 +55,8 @@ rhacs-setup:
         # -- Set Central DB resources.requests for a DEMO environment to save resources.
         resources:
           requests:
-            cpu: '1'
-            memory: '1Gi'
+            cpu: "1"
+            memory: "1Gi"
 
         # -- If you want this component to only run on specific nodes, you can
         # configure tolerations of tainted nodes.
@@ -122,7 +119,7 @@ rhacs-setup:
 
       # -- Syncwave for Argo CD to deploy the SecureCluster
       # @default -- 4
-      syncwave: '4'
+      syncwave: "4"
 
       # -- Name of the cluster
       # @default -- local-cluster"
@@ -154,9 +151,9 @@ rhacs-setup:
     # -- Basic settings for ACS authentication
     # This configuration is done by a Job, that will configure the OpenShift oauth for ACS.
     basic_acs_settings:
-      auth_provider: 'OpenShift'
-      auth_provider_type: 'openshift'
-      min_access_role: 'None'
+      auth_provider: "OpenShift"
+      auth_provider_type: "openshift"
+      min_access_role: "None"
       syncwave: 5
 
     ####################################################
@@ -176,7 +173,7 @@ rhacs-setup:
 
       # -- Syncwave for Argo CD to create this Job.
       # @default -- 3
-      syncwave: '3'
+      syncwave: "3"
 
     # -- Job that creates a console link in OpenShift
     consolelink:
@@ -186,7 +183,7 @@ rhacs-setup:
 
       # -- Syncwave for Argo CD to create this Job.
       # @default -- 3
-      syncwave: '3'
+      syncwave: "3"
 
       # -- Location of the ConsoleLink
       location: ApplicationMenu
@@ -211,7 +208,7 @@ helper-operator:
   operators:
     rhacs-operator:
       enabled: true
-      syncwave: '0'
+      syncwave: "0"
       namespace:
         name: *operatornamespace
         create: true
@@ -233,7 +230,6 @@ helper-status-checker:
   enabled: true
 
   checks:
-
     - operatorName: rhacs-operator
       namespace:
         name: rhacs-operator
