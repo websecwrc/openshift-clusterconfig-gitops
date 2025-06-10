@@ -28,6 +28,8 @@ rhacs-setup:
       # @default -- false
       enabled: true
 
+      pvc_size: 50Gi
+
       # -- Syncwave for Argo CD to create the Central
       # @default -- 3
       syncwave: "3"
