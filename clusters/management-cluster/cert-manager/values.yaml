@@ -129,7 +129,7 @@ cert_manager_Namespace: cert-manager
 
 policies:
   - name: my-approver-policy
-    enabled: false
+    enabled: true
 
     allowed:
       commonName:
@@ -176,13 +176,13 @@ policies:
         - "server auth"
         - "client auth"
 
-    constraints:
-      minDuration: 1h
-      maxDuration: 24h
-      privateKey:
-        algorithm: RSA
-        minSize: 2048
-        maxSize: 4096
+    # constraints:
+    #   minDuration: 1h
+    #   maxDuration: 24h
+    #   privateKey:
+    #     algorithm: RSA
+    #     minSize: 2048
+    #     maxSize: 4096
 
     selector:
       issuerRef: {}
