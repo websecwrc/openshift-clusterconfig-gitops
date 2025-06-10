@@ -2,7 +2,7 @@
 # -- Define ingressControllers
 # Multiple might be defined.
 ingresscontrollers:
-    # -- Name of the IngressController. OpenShift initial IngressController is called 'default'.
+  # -- Name of the IngressController. OpenShift initial IngressController is called 'default'.
   - name: default
 
     # -- Enable the configuration
@@ -29,7 +29,7 @@ ingresscontrollers:
     # @default -- empty
     #nodePlacement:
 
-      # NodeSelector that shall be used.
+    # NodeSelector that shall be used.
     #  nodeSelector:
     #    key: node-role.kubernetes.io/infra
     #    value: ''
@@ -58,9 +58,10 @@ certificates:
 
       dnsNames:
         - apps-crc.testing
-        - '*.apps-crc.testing'
+        - "*.apps-crc.testing"
 
       # Reference to the issuer that shall be used.
       issuerRef:
-        name: selfsigned
+        name: ca
         kind: ClusterIssuer
+
