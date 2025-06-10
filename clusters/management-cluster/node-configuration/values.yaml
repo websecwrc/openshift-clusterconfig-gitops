@@ -10,9 +10,3 @@ nodes:
     roles:
       infra: true
       worker: true
-
-    spec:
-      taints:
-        - effect: NoSchedule
-          key: infra
-          value: reserved
