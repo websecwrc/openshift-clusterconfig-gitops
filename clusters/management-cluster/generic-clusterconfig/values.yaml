@@ -3,6 +3,7 @@
 # @default -- []
 cluster_admin_list:
   - emergency
+  - kubeadmin
 
 # -- Enable the settings and configuration of a project template.
 # The information of the template can be found in templates/projecttempalte.yaml
