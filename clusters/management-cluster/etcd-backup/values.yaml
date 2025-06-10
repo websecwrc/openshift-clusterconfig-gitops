@@ -1,5 +1,5 @@
 name: &bu_name etcd-backup
-backup_storage_size: &backup_storage_size "100Gi"
+backup_storage_size: &backup_storage_size "10Gi"
 
 etcd-backup:
   enabled: true
