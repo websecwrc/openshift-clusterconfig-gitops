@@ -1,11 +1,11 @@
 ---
 nodes:
-  - name: node1
+  - name: crc
     enabled: true
     ignore_argocd_labels: true
 
     custom_labels:
-      environment: 'Management'
+      environment: "Management"
 
     roles:
       infra: true
@@ -13,6 +13,6 @@ nodes:
 
     spec:
       taints:
-      - effect: NoSchedule
-        key: infra
-        value: reserved
+        - effect: NoSchedule
+          key: infra
+          value: reserved
