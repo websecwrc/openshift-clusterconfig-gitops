@@ -10,7 +10,7 @@ bucket:
 
 # Replicas for internal registry
 # Default: 2
-# replicas: 2
+replicas: 1
 
 # Bind internal registry to specific nodes
 nodeSelector:
