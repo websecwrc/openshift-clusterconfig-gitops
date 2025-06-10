@@ -1,6 +1,6 @@
 ---
 name: &bu_name acs-backup
-backup_storage_size: &backup_storage_size "100Gi"
+backup_storage_size: &backup_storage_size "50Gi"
 
 rhacs-backup:
   # -- Enable ACS backup.
