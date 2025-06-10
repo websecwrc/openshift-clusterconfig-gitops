@@ -21,7 +21,7 @@ cert-manager:
 
         # Reference to the issuer that shall be used.
         issuerRef:
-          name: selfsigned
+          name: cluster
           kind: ClusterIssuer
 
 # -- The following section contains the configuration for the Red Hat build of Keycloak.
