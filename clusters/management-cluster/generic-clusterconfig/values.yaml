@@ -53,17 +53,16 @@ generic-cluster-config:
 
       # Add storage to Alertmanager to keep the data.
       storage:
-        class: gp3-csi
+        class: crc-csi-hostpath-provisioner
         size: 2Gi
 
     ##############
     # PROMETHEUS #
     ##############
     prometheusK8s:
-
       retention: 2d
 
       # Add storage to Prometheus to keep the data.
       storage:
-        class: gp3-csi
-        size: 10Gi
+        class: crc-csi-hostpath-provisioner
+        size: 5Gi

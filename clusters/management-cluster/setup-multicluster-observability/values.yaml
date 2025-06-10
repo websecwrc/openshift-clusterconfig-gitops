@@ -28,7 +28,7 @@ multicluster_observability:
       # Specify the storageClass Stateful Sets. This storage class will also be used for Object Storage if
       # MetricObjectStorage was configured for the system to create the storage."
       # Default: gp2
-      storageClass: gp3-csi
+      storageClass: crc-csi-hostpath-provisioner
 
     # Advanced configurations for observability
     advanced:
@@ -89,7 +89,7 @@ helper-objectstore:
   # type: pv-pool
 
   # The StorageClass the BackingStore is based on
-  baseStorageClass: gp3-csi
+  baseStorageClass: crc-csi-hostpath-provisioner
 
   # Name of the StorageClass that shall be enabled.
   storageclass_name: *storageclassname

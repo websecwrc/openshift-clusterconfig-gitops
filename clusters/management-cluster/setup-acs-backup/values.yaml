@@ -73,7 +73,7 @@ rhacs-backup:
 
     # -- StorageClass must be provided as empty value here, since NFS mount is not provided as storageclass.
     # @default -- N/A
-    storageClass: "gp3-csi"
+    storageClass: "crc-csi-hostpath-provisioner"
 
     # -- Set the name of the PV, only required if the PV will be created (see below)
     # @default -- false

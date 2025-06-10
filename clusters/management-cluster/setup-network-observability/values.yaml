@@ -235,8 +235,8 @@ helper-lokistack:
     #    effectiveDate: "2022-06-01"
 
   # -- Storage class name defines the storage class for ingester/querier PVCs.
-  # @default -- gp3-csi
-  storageclassname: gp3-csi
+  # @default -- crc-csi-hostpath-provisioner
+  storageclassname: crc-csi-hostpath-provisioner
 
   # -- Mode defines the mode in which lokistack-gateway component will be configured.
   # Can be either: static (default), dynamic, openshift-logging, openshift-network
@@ -355,7 +355,7 @@ helper-objectstore:
   # type: py-pool
 
   # The StorageClass the BackingStore is based on
-  baseStorageClass: gp3-csi
+  baseStorageClass: crc-csi-hostpath-provisioner
 
   # Name of the StorageClass that shall be enabled.
   storageclass_name: *storageclassname

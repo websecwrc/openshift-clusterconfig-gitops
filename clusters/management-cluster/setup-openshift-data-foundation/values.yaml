@@ -14,7 +14,7 @@ openshift-data-foundation:
 
       # Name of the storageclass
       # The class must exist upfront and is currently not created by this chart.
-      storageclass: gp3-csi
+      storageclass: crc-csi-hostpath-provisioner
 
     # Second option is a full deployment, which will provide Block, File and Object Storage
     full_deployment:
@@ -59,7 +59,7 @@ openshift-data-foundation:
 
               # Name of the stroageclass
               # The class must exist upfront and is currently not created by this chart.
-              storageClassName: gp3-csi
+              storageClassName: crc-csi-hostpath-provisioner
 
         # Replicas: Default 3
         # replica: 3

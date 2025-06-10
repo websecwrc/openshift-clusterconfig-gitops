@@ -25,5 +25,5 @@ etcd-backup:
   pvc:
     name: *bu_name
     size: *backup_storage_size
-    storageClass: "gp3-csi"
+    storageClass: "crc-csi-hostpath-provisioner"
     volumeName: *bu_name
