@@ -3,8 +3,8 @@
 # setup-container-security-operator
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.6](https://img.shields.io/badge/Version-1.0.6-informational?style=flat-square)
 

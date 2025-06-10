@@ -312,7 +312,7 @@ applicationsets:
     syncPolicy:
       autosync_enabled: false
     path: charts/rhacs-demo-applications/
-    repourl: "https://github.com/tjungbauer/helm-charts"
+    repourl: "https://github.com/websecwrc/helm-charts"
     targetrevision: "main"
 
   # Install Pipeline Demo
@@ -329,7 +329,7 @@ applicationsets:
     syncPolicy:
       autosync_enabled: false
     path: charts/pipeline-example/
-    repourl: "https://github.com/tjungbauer/helm-charts"
+    repourl: "https://github.com/websecwrc/helm-charts"
     targetrevision: "main"
 
 # These define the default values.

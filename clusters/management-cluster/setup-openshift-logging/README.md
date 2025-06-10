@@ -3,8 +3,8 @@
 # setup-openshift-logging
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square)
 
@@ -44,11 +44,11 @@ This chart has the following dependencies:
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/websecwrc/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/websecwrc/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-openshift-logging
+Source code: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-openshift-logging
 
 ## Example values files
 

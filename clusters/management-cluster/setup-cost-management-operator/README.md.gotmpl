@@ -5,8 +5,8 @@ This Operator can be used to get information about the usage (cpu, memory, etc) 
 
 Per default, it would like to upload the results to cloud.redhat.com. In the example below the airgapped method is used. In such a case, results must be downloaded manually from the persistent volume. 
 
-It mainly uses the Chart [cost-management](https://github.com/tjungbauer/helm-charts/tree/main/charts/cost-management) which takes care of configuring the Operator.
-The [values-file](https://github.com/tjungbauer/helm-charts/tree/main/charts/cost-management) of the main chart provides further examples of possible settings.
+It mainly uses the Chart [cost-management](https://github.com/websecwrc/helm-charts/tree/main/charts/cost-management) which takes care of configuring the Operator.
+The [values-file](https://github.com/websecwrc/helm-charts/tree/main/charts/cost-management) of the main chart provides further examples of possible settings.
 
 
 Three additional Charts are required as a dependency and are responsible for installing and verifying the Operator itself as well as providing a template library. 

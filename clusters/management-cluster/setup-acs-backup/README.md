@@ -3,8 +3,8 @@
 # setup-acs-backup
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square)
 
@@ -15,7 +15,7 @@
   Deploys Backup for Advanced Cluster Security (ACS) on target cluster.
 
 This "wrapper" Helm Chart is used to deploy and configure Advanced Cluster Security (ACS) using a GitOps approach.
-It uses the Chart [RHACS Setup](https://github.com/tjungbauer/helm-charts/tree/main/charts/rhacs-setup) which mainly takes care to
+It uses the Chart [RHACS Setup](https://github.com/websecwrc/helm-charts/tree/main/charts/rhacs-setup) which mainly takes care to
 
 - Setup the Central resource (UI of ACS)
 - Create an init-bundle
@@ -47,11 +47,11 @@ This chart has the following dependencies:
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/websecwrc/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/websecwrc/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-acs-backup
+Source code: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-acs-backup
 
 ## Example values files
 

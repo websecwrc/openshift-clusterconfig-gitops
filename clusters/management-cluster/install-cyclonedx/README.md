@@ -3,8 +3,8 @@
 # install-cyclonedx
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square)
 
@@ -18,7 +18,7 @@ CycloneDX provides advanced, supply chain capabilities for cyber risk reduction.
 SBOM is a complete and accurate inventory of all first-party and third-party components is essential for risk identification.
 
 This chart will install CycloneDX BOM Repo server, which enables you to store SBOM inventories on your cluster.
-It uses the Chart [cyclonedx](https://github.com/tjungbauer/helm-charts/tree/main/charts/cyclonedx).
+It uses the Chart [cyclonedx](https://github.com/websecwrc/helm-charts/tree/main/charts/cyclonedx).
 
 For detailed information check: [CycloneDX SBOM](https://cyclonedx.org/capabilities/sbom/)
 
@@ -40,9 +40,9 @@ This chart has the following dependencies:
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/websecwrc/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/websecwrc/openshift-clusterconfig-gitops>
 
 Source code:
 

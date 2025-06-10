@@ -3,8 +3,8 @@
 # clusterconfig-apiserver
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.2](https://img.shields.io/badge/Version-1.0.2-informational?style=flat-square)
 
@@ -27,7 +27,7 @@ This chart has the following dependencies:
 | https://charts.stderr.at/ | tpl | ~1.0.0 |
 | https://charts.stderr.at | generic-cluster-config | ~1.0.10 |
 
-It is best used with a full GitOps approach such as Argo CD does. For example, https://github.com/tjungbauer/openshift-clusterconfig-gitops
+It is best used with a full GitOps approach such as Argo CD does. For example, https://github.com/websecwrc/openshift-clusterconfig-gitops
 
 ## Maintainers
 
@@ -37,11 +37,11 @@ It is best used with a full GitOps approach such as Argo CD does. For example, h
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/websecwrc/openshift-clusterconfig-gitops>
+* <https://github.com/websecwrc/helm-charts>
 * <https://charts.stderr.at/>
 
-Source code: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/all/etcd-encryption
+Source code: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/all/etcd-encryption
 
 ## Parameters
 Verify the appropriate sub-charts for a full list of parameters.

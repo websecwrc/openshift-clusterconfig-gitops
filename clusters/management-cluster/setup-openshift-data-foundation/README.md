@@ -3,8 +3,8 @@
 # clusterbranding
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.2](https://img.shields.io/badge/Version-1.0.2-informational?style=flat-square)
 
@@ -15,13 +15,13 @@
   Deploys Cluster Branding such as custom Login Page or Logo etc.
 
 This "wrapper" Helm Chart is used to deploy and configure OpenShift Data Foundation using a GitOps approach.
-It mainly uses the Chart [openshift-data-foundation](https://github.com/tjungbauer/helm-charts/tree/main/charts/openshift-data-foundation) which takes care to
+It mainly uses the Chart [openshift-data-foundation](https://github.com/websecwrc/helm-charts/tree/main/charts/openshift-data-foundation) which takes care to
 
 - Setup the ODF
 - Create a Storagesystem, by either configuring a full storage or a MultiCloudGateway only
 
 The example below demonstrates the deployment and configuration of ODF MultiCloudGateWay. It is just a small part of the possibilities the Chart provides, but it is an easy and quick way to provide object storage (s3) inside OpenShift. With that further services such as Logging or Quay can be deployed.
-The [values-file](https://github.com/tjungbauer/helm-charts/tree/main/charts/openshift-data-foundation) of the main chart provides further examples of possible settings.
+The [values-file](https://github.com/websecwrc/helm-charts/tree/main/charts/openshift-data-foundation) of the main chart provides further examples of possible settings.
 
 Three additional Charts are required as a dependency and are responsible for installing and verifying the Operator itself as well as providing a template library.
 Verify the README and/or the values files for further information.

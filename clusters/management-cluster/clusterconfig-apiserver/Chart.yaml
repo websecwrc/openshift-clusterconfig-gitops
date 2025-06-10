@@ -20,7 +20,7 @@ maintainers:
     url: https://blog.stderr.at/
 sources:
   - https://github.com/websecwrc/openshift-clusterconfig-gitops
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/websecwrc/helm-charts
   - https://charts.stderr.at/
 home: https://github.com/websecwrc/openshift-clusterconfig-gitops/tree/main/clusters/all/etcd-encryption
 keywords:

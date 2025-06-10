@@ -43,7 +43,7 @@ helper-objectstore:
 # Quay Setup and Configuration
 # Using chart quay-registry-setup
 # Verify the Chart documentation:
-# https://github.com/tjungbauer/helm-charts/tree/main/charts/quay-registry-setup
+# https://github.com/websecwrc/helm-charts/tree/main/charts/quay-registry-setup
 ##################################
 quay-registry-setup:
   quay:

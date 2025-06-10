@@ -3,7 +3,7 @@
 # GitOps instance for Application workload
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
  
 
   ## Description
@@ -27,17 +27,17 @@ This chart has the following dependencies:
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/websecwrc/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/websecwrc/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/tjungbauer/helm-charts/tree/main/charts/openshift-gitops
+Source code: https://github.com/websecwrc/helm-charts/tree/main/charts/openshift-gitops
 
 ## Parameters
 
 Verify the sub-charts for a documentation of the possible settings:
 
-* [openshift-gitops](https://github.com/tjungbauer/helm-charts/tree/main/charts/openshift-gitops)
+* [openshift-gitops](https://github.com/websecwrc/helm-charts/tree/main/charts/openshift-gitops)
 
 ## Example
 

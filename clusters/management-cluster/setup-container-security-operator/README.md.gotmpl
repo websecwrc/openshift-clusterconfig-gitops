@@ -1,7 +1,7 @@
 {{ template "doc.header" . }}
 
 This "wrapper" Helm Chart is used to deploy Quay Container Security Operator using a GitOps approach. 
-It calls the Chart [setup-container-security-operator](https://github.com/tjungbauer/helm-charts/tree/main/charts/setup-container-security-operator) which takes care to deploy the Operator that does not require any additional configuration.
+It calls the Chart [setup-container-security-operator](https://github.com/websecwrc/helm-charts/tree/main/charts/setup-container-security-operator) which takes care to deploy the Operator that does not require any additional configuration.
 
 The Operator does not require any additional configuration. It is installed... that's all.
 However, for the sake of consistency, I am still checking if the Operator deployment was successful (user helper-status-checker).

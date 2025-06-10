@@ -3,8 +3,8 @@ apiVersion: v2
 name: enable-etcd-backup
 description: Create a CronJob that performs ETCD Backup and stores the backup to a PV.
 version: 1.0.0
-home: https://github.com/tjungbauer/helm-charts/tree/main/charts/etcd-backup
-icon: https://github.com/tjungbauer/helm-charts/raw/gh-pages/images/backup.png
+home: https://github.com/websecwrc/helm-charts/tree/main/charts/etcd-backup
+icon: https://github.com/websecwrc/helm-charts/raw/gh-pages/images/backup.png
 dependencies:
   - name: tpl
     version: ~1.0.0
@@ -17,6 +17,6 @@ maintainers:
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/websecwrc/helm-charts
   - https://charts.stderr.at/
   - https://github.com/websecwrc/openshift-clusterconfig-gitops

@@ -3,8 +3,8 @@
 # setup-file-integrity-operator
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/websecwrc/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/websecwrc/helm-charts/actions/workflows/release.yml)
 
   ![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square)
 
@@ -19,8 +19,8 @@ This Operator can be used to verify if any file has been changed on the operatin
 
 The example below provides a configuration for the worker nodes and the control planes.
 
-It mainly uses the Chart [file-integrity-operator](https://github.com/tjungbauer/helm-charts/tree/main/charts/file-integrity-operator) which takes care of configuring the Operator.
-The [values-file](https://github.com/tjungbauer/helm-charts/tree/main/charts/file-integrity-operator) of the main chart provides further examples of possible settings.
+It mainly uses the Chart [file-integrity-operator](https://github.com/websecwrc/helm-charts/tree/main/charts/file-integrity-operator) which takes care of configuring the Operator.
+The [values-file](https://github.com/websecwrc/helm-charts/tree/main/charts/file-integrity-operator) of the main chart provides further examples of possible settings.
 
 Three additional Charts are required as a dependency and are responsible for installing and verifying the Operator itself as well as providing a template library.
 Verify the README and/or the values files for further information.

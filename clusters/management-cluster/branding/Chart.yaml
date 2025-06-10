@@ -11,7 +11,7 @@ maintainers:
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/websecwrc/helm-charts
   - https://charts.stderr.at/
   - https://github.com/websecwrc/openshift-clusterconfig-gitops
 keywords:
